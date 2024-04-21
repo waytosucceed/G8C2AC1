@@ -1,0 +1,171 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <style>
+            p{
+                font-size:30px;
+                margin-top:10%;
+                font-weight: bold;
+            }
+
+            .maindiv{
+                border: 5px rgb(164, 246, 229) ridge;
+                border-radius: 20px;
+            }
+
+            #nextbtn, #backbtn{
+                width: 25%;
+                font-size:30px;
+                margin-right: 5%
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+            #story{
+             
+                font-size: 18px;
+                border-radius: 20px;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Pronouns</h2>
+         <div class="maindiv container">
+            <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv" style= "height: 450px;">
+                <img id="family" src="2.jpg" style="width:100%; height:90%; margin-top:5%;"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" style= "height: 450px;">
+                <p id="story" style="text-align:left; width:100%; margin-top:5%;">
+                    Pronouns are words that we use instead of repeating nouns over and over again.
+                    <br><br>
+                    <u>For example:</u> If we have to say, "Garnet went to the store, and Garnet bought an ice cream," <br>
+                    We can say "Garnet went to the store, and <u>she</u> bought an ice cream." <br>
+                    "She" is a pronoun that replaces "Garnet." <br><br> Pronouns make sentences smoother and less repetitive.
+                    We use pronouns like "he," "she," "it," "they," and "we" in sentences to avoid repeating the same nouns. 
+                    They help us communicate more clearly and efficiently.
+                </p> 
+            </div>
+        </center>
+        </div>
+        <br>
+        <div class="" style="text-align:center; padding-top:1%">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+
+        </div>
+    
+
+        </center>   
+
+        <script>
+
+            var images = ["Assests/1.jpg", "Assests/2.jpg", "Assests/3.jpg", "Assests/4.jpg", "Assests/5.jpg", "Assests/6.jpg", "Assests/7.jpg", "Assests/8.jpg", "Assests/9.jpg", "Assests/10.jpg", "Assests/11.jpg", "Assests/12.jpg"];
+            var para=["Garnet thought this must be the hottest day that had ever been in the world. Every day for weeks she had thought the same thing, but this was really the worst of all. This morning the thermometer outside the village drugstore had pointed a thin red finger to one hundred and ten degrees Fahrenheit.",
+                    "Now, let's replace some nouns with pronouns in the story: <br><br>In this paragraph:<i>'Garnet'</i> is replaced with <i>'she'</i> as a subject pronoun. <br><br>'The <i>'thermometer'</i> can be replaced with <i>'it'</i> as a subject pronoun. <br><br> <i>'Her'</i> is a possessive pronoun that shows something belongs to Garnet.",
+                    "It was like being inside of a drum. The sky like a bright skin was stretched tight above the valley, and the earth, too, was tight and hard with heat. <br> <br>Later, when it was dark, there would be a noise of thunder, as though a great hand beat upon the drum; there would be heavy clouds above the hills, and flashes of heat lightning, but no rain.",
+                    "Another type of pronoun is<br> <br>3)Reflexive Pronouns:<br>Reflexive pronouns are words like myself, yourself, himself, herself, itself, ourselves, yourselves and themselves. They refer back to a person or thing. We often use reflexive pronouns when the subject and the object of a verb are the same.</p>",   
+                    "It had been like that for a long time. After supper, each night her father came out of the house and looked up at the sky, then down at his fields of corn and oats. “No,” he would say, shaking his head, <i>“No rain tonight.”<i>",
+                    "Next type of pronoun is <br> <br> 4) Relative Pronouns: Relative pronouns introduce relative clauses. The most common relative pronouns are who, whom, whose, which, that. <br>The relative pronoun we use depends on what we are referring to and the type of relative clause <br>Example: <br> We don’t know the person <i><u>who</u></i> donated this money. <br>We drove past my old school, <i><u>which</i></u> is celebrating its 100th anniversary this year",
+                    "The oats were turning yellow before their time, and the corn leaves were torn and brittle, rustling like newspaper when the dry wind blew upon them. If the rain didn’t come soon there would be no corn to harvest, and they would have to cut the oats for hay.",
+
+                    "Garnet looked up at the smooth sky angrily, and shook her fist. “You!” she cried, “Why in time can’t you let down a little rain!” At each step her bare feet kicked up a small cloud of dust. There was dust in her hair, and up her nose, making it tickle.",
+
+                    "Slowly Garnet walked to the yellow house under tall maple trees and opened the kitchen door. Her mother was cooking supper on the big black coal stove, and her little brother Donald sat on the floor making a noise like a train.",
+
+                    "Her mother looked up. Her cheeks were red from the hot stove. “Any mail, darling?” she asked. “Bills,” replied Garnet. “Oh,” said her mother and turned back to her cooking. Garnet set the table by the open window. Knife, fork, knife, fork, knife, fork, knife, fork but only a spoon for Donald, who managed even that so absentmindedly that there was usually as much cereal on the outside of him as inside at the end of a meal.",
+
+                    "Then she went down to the cold room. It was still and dim down there. A spigot dripped peacefully into the deep pool of water below, where the milk cans and stone butter crock were sunk. Garnet filled a pitcher with milk and put a square of butter on the plate she had brought. She knelt down and plunged both her arms into the water. It was cloudy with spilled milk but icy cold. She could feel coolness spreading through all her veins and a little shiver ran over her.",
+                 ]
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.fontSize="18px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Let's discuss some examples from the story: ";
+                    document.getElementById("story").innerHTML = "<i>'After supper each night her father came out of the house'</i> Here, <u>'her'</u> is a possessive pronoun indicating that the father belongs to or is associated with someone previously mentioned. It shows ownership or relationship. <br><br><i>'...then down at his fields of corn and oats.'</i><u>'His'</u> is also a possessive pronoun, indicating ownership or relationship. It shows that the fields belong to someone mentioned earlier, likely the father.<br><br><i>'No,</i> he would say, shaking his head, 'No rain tonight.'Finally, <u>he</u> is a subject pronoun referring to a specific person, in this case, the father who is speaking.";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Summer Scenes"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="18px"
+                    document.getElementById("story").style.backgroundColor="lightblue"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("story").innerHTML = 'Pronouns are words that we use instead of repeating nouns over and over again.<br><br> <u>For example:</u> If we have to say, "Garnet went to the store, and Garnet bought an ice cream," <br> We can say "Garnet went to the store, and <u>she</u> bought an ice cream." <br> "She" is a pronoun that replaces "Garnet." <br><br> Pronouns make sentences smoother and less repetitive. We use pronouns like "he," "she," "it," "they," and "we" in sentences to avoid repeating the same nouns.They help us communicate more clearly and efficiently.';
+                }
+                else{
+                document.getElementById("story").style.fontSize="22px"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
